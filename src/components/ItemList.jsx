@@ -1,28 +1,35 @@
 
 
 export default function ItemList({
-  items
+  items,
+  handleDeleteItem,
+  handleToggleItem,
 }) {
   return (
     <ul>
       {items.map((item) => {
         return (
-          <Item key={item.id} item={item} />
+          <Item
+            key={item.id}
+            item={item}
+            handleDeleteItem={handleDeleteItem}
+            handleToggleItem={handleToggleItem}
+          />
         )
       })}
     </ul>
   )
 }
 
-const Item = ({ item }) => {
+const Item = ({ item, handleDeleteItem,handleToggleItem }) => {
   return (
     <li className="item">
       <label>
-        <input checked={item.packed} type="checkbox" />
+        <input checked={item.packed} type="checkbox" onClick={()=>handleToggleItem(item.id)} />
         {item.name}
       </label>
 
-      <button>❌</button>
+      <button onClick={() => handleDeleteItem(item.id)}>❌</button>
     </li>
   )
 }

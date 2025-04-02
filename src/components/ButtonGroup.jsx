@@ -1,14 +1,18 @@
 import Button from "./Button";
-import { secondaryButtons } from "../lib/constants";
 
-export default function ButtonGroup() {
+export default function ButtonGroup({
+  handleRemoveItems,
+  handleResetToInitial,
+  handleMarkAllAsComplete,
+  handleMarkAllAsIncomplete,
+}) {
   return (
     <section className="button-group">
-      {secondaryButtons.map((text) => {
-        return (
-          <Button key={text} buttonType="secondary">{text}</Button>
-        )
-      })}
+      <Button onClick={handleMarkAllAsComplete}>Mark all as complete</Button>
+      <Button onClick={handleMarkAllAsIncomplete}>Mark all as incomplete</Button>
+      <Button onClick={handleResetToInitial}>Reset to initial</Button>
+      <Button onClick={handleRemoveItems}>Remove all items</Button>
     </section>
   )
 }
+
