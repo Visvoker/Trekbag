@@ -10,7 +10,7 @@ export default function Sidebar({
 }) {
   return (
     <div className="sidebar">
-      <AddItemForm handleAddItem={handleAddItem} />
+      <AddItemForm onAddItem={handleAddItem} />
       <ButtonGroup
         handleRemoveItems={handleRemoveItems}
         handleResetToInitial={handleResetToInitial}

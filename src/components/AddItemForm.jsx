@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import Button from "./Button";
 
 export default function AddItemForm({
-  handleAddItem,
+  onAddItem,
 }) {
   const [itemText, setItemText] = useState("");
   const inputRef = useRef();
@@ -17,7 +17,7 @@ export default function AddItemForm({
       return;
     }
 
-    handleAddItem(itemText)
+    onAddItem(itemText)
     setItemText("")
   }
 
