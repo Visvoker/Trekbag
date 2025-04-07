@@ -3,9 +3,8 @@ import Footer from "./Footer"
 import Header from "./Header"
 import Sidebar from "./Sidebar"
 import ItemList from "./ItemList"
-import BackgroundHeading from "./BackgroundHeading"
-import ItemsContextProvider from "../contexts/ItemsContextProvider"
 
+import BackgroundHeading from "./BackgroundHeading"
 
 function App() {
 
@@ -14,11 +13,9 @@ function App() {
       <BackgroundHeading />
 
       <main>
-        <ItemsContextProvider>
           <Header />
           <ItemList />
           <Sidebar />
-        </ItemsContextProvider>
       </main>
 
       <Footer />

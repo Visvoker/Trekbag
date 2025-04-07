@@ -36,7 +36,7 @@ export default function ItemsContextProvider({ children }) {
     setItems(newItems);
   }
 
-  const handleRemoveItems = () => {
+  const handleRemoveAllItems = () => {
     setItems([]);
   };
 
@@ -70,7 +70,7 @@ export default function ItemsContextProvider({ children }) {
       handleAddItem,
       handleDeleteItem,
       handleToggleItem,
-      handleRemoveItems,
+      handleRemoveAllItems,
       handleResetToInitial,
       handleMarkAllAsComplete,
       handleMarkAllAsIncomplete,
